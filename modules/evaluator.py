@@ -67,3 +67,15 @@ Scoring:
         ).strip()
 
     return json.loads(response_text)
+    if __name__ == "__main__":
+    test_result = evaluate_answer(
+        question="What is supervised learning?",
+        answer="Supervised learning uses labelled data to train a model and make predictions on new data.",
+        expected_concepts=[
+            "labelled data",
+            "training",
+            "prediction"
+        ]
+    )
+
+    print(test_result)
