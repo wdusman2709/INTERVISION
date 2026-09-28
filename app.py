@@ -398,6 +398,16 @@ elif st.session_state.page == "results":
         st.info(
             item["answer"]
         )
+        st.metric(
+        "Basic Score",
+        f"{item['score']}/10"
+        )
+
+        st.write(
+        f"Concepts identified: "
+        f"{item['concepts_found']} "
+        f"/ {item['total_concepts']}"
+        )
 
         st.caption(
             f"Category: {item['category']}"
