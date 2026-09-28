@@ -312,14 +312,23 @@ elif st.session_state.page == "interview":
 
         else:
 
-            # Save the answer
+            # Calculate basic score
+            result = score_answer(
+                answer,
+                current_question["expected_concepts"]
+            )
+
+            # Save the answer and score
             st.session_state.answers.append({
-                "question": current_question["question"],
-                "answer": answer,
-                "category": current_question["category"],
+            "question": current_question["question"],
+            "answer": answer,
+              "category": current_question["category"],
                 "expected_concepts": current_question[
                     "expected_concepts"
-                ]
+            ],
+            "score": result["score"],
+            "concepts_found": result["concepts_found"],
+            "total_concepts": result["total_concepts"]
             })
 
             st.success(
