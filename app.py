@@ -294,9 +294,42 @@ elif st.session_state.page == "interview":
     )
 
     if st.button(
-        "Submit Answer →",
-        use_container_width=True
-    ):
+    "Submit Answer →",
+    use_container_width=True
+):
+
+    if answer.strip() == "":
+        st.warning(
+            "Please enter your answer before continuing."
+        )
+
+    else:
+
+        # Save the candidate's answer
+        st.session_state.answers.append({
+            "question": current_question["question"],
+            "answer": answer,
+            "category": current_question["category"],
+            "expected_concepts": current_question["expected_concepts"]
+        })
+
+        st.success("Answer saved successfully! ✅")
+
+        # Check whether more questions remain
+        if (
+            question_number + 1
+            < len(st.session_state.interview_questions)
+        ):
+
+            st.session_state.current_question += 1
+
+            st.rerun()
+
+        else:
+
+            st.session_state.page = "results"
+
+            st.rerun()
 
         if answer.strip() == "":
             st.warning("Please enter your answer before continuing.")
