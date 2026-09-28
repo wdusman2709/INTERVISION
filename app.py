@@ -352,3 +352,54 @@ elif st.session_state.page == "interview":
                 st.success(
                     "🎉 You have completed the interview!"
                 )
+# --------------------------------------------------
+# 7. RESULTS PAGE
+# --------------------------------------------------
+
+elif st.session_state.page == "results":
+
+    st.title("📊 Interview Results")
+
+    st.success(
+        "🎉 Interview completed successfully!"
+    )
+
+    st.write(
+        f"**Candidate:** {st.session_state.name}"
+    )
+
+    st.write(
+        f"**Role:** {st.session_state.job_role}"
+    )
+
+    st.write(
+        f"**Difficulty:** {st.session_state.difficulty}"
+    )
+
+    st.divider()
+
+    st.subheader("📝 Your Answers")
+
+    for index, item in enumerate(
+        st.session_state.answers
+    ):
+
+        st.markdown(
+            f"### Question {index + 1}"
+        )
+
+        st.write(
+            item["question"]
+        )
+
+        st.markdown("**Your Answer:**")
+
+        st.info(
+            item["answer"]
+        )
+
+        st.caption(
+            f"Category: {item['category']}"
+        )
+
+        st.divider()
