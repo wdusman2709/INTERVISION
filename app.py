@@ -1,6 +1,8 @@
 import streamlit as st
 import json
 import random
+
+from modules.scorer import score_answer
 # --------------------------------------------------
 # 1. Page setup
 # --------------------------------------------------
