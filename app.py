@@ -245,10 +245,10 @@ elif st.session_state.page == "interview":
     role = st.session_state.job_role
     difficulty = st.session_state.difficulty
 
-    # Get questions for selected role and difficulty
+    # Get available questions
     available_questions = question_bank[role][difficulty]
 
-    # Create interview question list only once
+    # Create the interview questions only once
     if "interview_questions" not in st.session_state:
 
         number_of_questions = st.session_state.number_of_questions
@@ -264,13 +264,15 @@ elif st.session_state.page == "interview":
     if "answers" not in st.session_state:
         st.session_state.answers = []
 
-    # Current question
+    # Current question number
     question_number = st.session_state.current_question
 
+    # Get current question
     current_question = st.session_state.interview_questions[
         question_number
     ]
 
+    # Display question number
     st.write(
         f"**Question {question_number + 1} "
         f"of {len(st.session_state.interview_questions)}**"
@@ -278,6 +280,7 @@ elif st.session_state.page == "interview":
 
     st.divider()
 
+    # Display question
     st.markdown(
         f"### {current_question['question']}"
     )
@@ -286,6 +289,7 @@ elif st.session_state.page == "interview":
         f"Category: {current_question['category']}"
     )
 
+    # Answer box
     answer = st.text_area(
         "Your Answer",
         placeholder="Type your answer here...",
@@ -293,51 +297,34 @@ elif st.session_state.page == "interview":
         key=f"answer_{question_number}"
     )
 
+    # Submit answer
     if st.button(
-    "Submit Answer →",
-    use_container_width=True
-):
-
-    if answer.strip() == "":
-        st.warning(
-            "Please enter your answer before continuing."
-        )
-
-    else:
-
-        # Save the candidate's answer
-        st.session_state.answers.append({
-            "question": current_question["question"],
-            "answer": answer,
-            "category": current_question["category"],
-            "expected_concepts": current_question["expected_concepts"]
-        })
-
-        st.success("Answer saved successfully! ✅")
-
-        # Check whether more questions remain
-        if (
-            question_number + 1
-            < len(st.session_state.interview_questions)
-        ):
-
-            st.session_state.current_question += 1
-
-            st.rerun()
-
-        else:
-
-            st.session_state.page = "results"
-
-            st.rerun()
+        "Submit Answer →",
+        use_container_width=True
+    ):
 
         if answer.strip() == "":
-            st.warning("Please enter your answer before continuing.")
+            st.warning(
+                "Please enter your answer before continuing."
+            )
 
         else:
 
-            st.success("Answer submitted successfully! ✅")
+            # Save the answer
+            st.session_state.answers.append({
+                "question": current_question["question"],
+                "answer": answer,
+                "category": current_question["category"],
+                "expected_concepts": current_question[
+                    "expected_concepts"
+                ]
+            })
 
+            st.success(
+                "Answer saved successfully! ✅"
+            )
+
+            # Check if more questions remain
             if (
                 question_number + 1
                 < len(st.session_state.interview_questions)
@@ -349,9 +336,12 @@ elif st.session_state.page == "interview":
 
             else:
 
-                st.success(
-                    "🎉 You have completed the interview!"
-                )
+                # Interview completed
+                st.session_state.page = "results"
+
+                st.rerun()
+
+
 # --------------------------------------------------
 # 7. RESULTS PAGE
 # --------------------------------------------------
