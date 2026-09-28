@@ -155,9 +155,13 @@ elif st.session_state.page == "setup":
 
     st.title("⚙️ Interview Setup")
 
-    st.write("Configure your interview before starting.")
+    st.write(
+        "Configure your interview before starting."
+    )
 
     st.divider()
+
+    # Show candidate information
 
     st.write(
         f"**Candidate:** {st.session_state.name}"
@@ -169,12 +173,89 @@ elif st.session_state.page == "setup":
 
     st.divider()
 
-    st.info(
-        "Interview Setup module will be added in the next step."
+    # Interview configuration
+
+    difficulty = st.selectbox(
+        "🎯 Difficulty Level",
+        [
+            "Easy",
+            "Medium",
+            "Hard"
+        ]
     )
 
-    if st.button("⬅️ Back to Profile", use_container_width=True):
+    interview_type = st.selectbox(
+        "🧠 Interview Type",
+        [
+            "HR",
+            "Technical",
+            "Mixed"
+        ]
+    )
+
+    number_of_questions = st.selectbox(
+        "❓ Number of Questions",
+        [
+            5,
+            10
+        ]
+    )
+
+    st.divider()
+
+    if st.button(
+        "🚀 Start Interview",
+        use_container_width=True
+    ):
+
+        # Save interview settings
+
+        st.session_state.difficulty = difficulty
+        st.session_state.interview_type = interview_type
+        st.session_state.number_of_questions = number_of_questions
+
+        st.session_state.page = "interview"
+
+        st.rerun()
+
+    if st.button(
+        "⬅️ Back to Profile",
+        use_container_width=True
+    ):
 
         st.session_state.page = "profile"
 
         st.rerun()
+
+
+# --------------------------------------------------
+# 6. INTERVIEW PAGE
+# --------------------------------------------------
+
+elif st.session_state.page == "interview":
+
+    st.title("🎤 Interview")
+
+    st.success("Interview module is ready for the next step.")
+
+    st.write(
+        f"**Role:** {st.session_state.job_role}"
+    )
+
+    st.write(
+        f"**Difficulty:** {st.session_state.difficulty}"
+    )
+
+    st.write(
+        f"**Interview Type:** {st.session_state.interview_type}"
+    )
+
+    st.write(
+        f"**Questions:** {st.session_state.number_of_questions}"
+    )
+
+    st.divider()
+
+    st.info(
+        "Question Engine will be added next."
+    )
