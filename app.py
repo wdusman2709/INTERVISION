@@ -260,8 +260,12 @@ elif st.session_state.page == "interview":
 
         st.session_state.current_question = 0
 
-    # Current question
-    question_number = st.session_state.current_question
+    # Create answer storage only once
+if "answers" not in st.session_state:
+    st.session_state.answers = []
+
+# Current question
+question_number = st.session_state.current_question
 
     current_question = st.session_state.interview_questions[
         question_number
