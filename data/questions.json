@@ -1,1 +1,168 @@
+{
+    "AI/ML Intern": {
+        "Easy": [
+            {
+                "id": 1,
+                "question": "What is Artificial Intelligence?",
+                "category": "AI Fundamentals",
+                "expected_concepts": [
+                    "machines",
+                    "intelligence",
+                    "human-like tasks"
+                ]
+            },
+            {
+                "id": 2,
+                "question": "What is Machine Learning?",
+                "category": "ML Fundamentals",
+                "expected_concepts": [
+                    "learning from data",
+                    "patterns",
+                    "prediction"
+                ]
+            },
+            {
+                "id": 3,
+                "question": "What is the difference between AI and Machine Learning?",
+                "category": "AI Fundamentals",
+                "expected_concepts": [
+                    "AI",
+                    "machine learning",
+                    "subset"
+                ]
+            },
+            {
+                "id": 4,
+                "question": "What is a dataset?",
+                "category": "Data",
+                "expected_concepts": [
+                    "collection of data",
+                    "training",
+                    "analysis"
+                ]
+            },
+            {
+                "id": 5,
+                "question": "What is a feature in Machine Learning?",
+                "category": "ML Fundamentals",
+                "expected_concepts": [
+                    "input",
+                    "variable",
+                    "data"
+                ]
+            }
+        ],
 
+        "Medium": [
+            {
+                "id": 6,
+                "question": "What is supervised learning?",
+                "category": "Machine Learning",
+                "expected_concepts": [
+                    "labelled data",
+                    "training",
+                    "prediction"
+                ]
+            },
+            {
+                "id": 7,
+                "question": "What is unsupervised learning?",
+                "category": "Machine Learning",
+                "expected_concepts": [
+                    "unlabelled data",
+                    "patterns",
+                    "clustering"
+                ]
+            },
+            {
+                "id": 8,
+                "question": "What is overfitting?",
+                "category": "Machine Learning",
+                "expected_concepts": [
+                    "training data",
+                    "poor generalization",
+                    "unseen data"
+                ]
+            },
+            {
+                "id": 9,
+                "question": "What is the purpose of train-test split?",
+                "category": "Model Evaluation",
+                "expected_concepts": [
+                    "training data",
+                    "testing data",
+                    "evaluation"
+                ]
+            },
+            {
+                "id": 10,
+                "question": "What is the difference between classification and regression?",
+                "category": "Machine Learning",
+                "expected_concepts": [
+                    "classification",
+                    "categories",
+                    "regression",
+                    "continuous values"
+                ]
+            }
+        ],
+
+        "Hard": [
+            {
+                "id": 11,
+                "question": "Explain the bias-variance tradeoff.",
+                "category": "Machine Learning",
+                "expected_concepts": [
+                    "bias",
+                    "variance",
+                    "underfitting",
+                    "overfitting"
+                ]
+            },
+            {
+                "id": 12,
+                "question": "How would you handle missing values in a dataset?",
+                "category": "Data Preprocessing",
+                "expected_concepts": [
+                    "missing values",
+                    "removal",
+                    "imputation",
+                    "mean",
+                    "median"
+                ]
+            },
+            {
+                "id": 13,
+                "question": "How can you evaluate a classification model?",
+                "category": "Model Evaluation",
+                "expected_concepts": [
+                    "accuracy",
+                    "precision",
+                    "recall",
+                    "F1 score"
+                ]
+            },
+            {
+                "id": 14,
+                "question": "What is cross-validation and why is it useful?",
+                "category": "Model Evaluation",
+                "expected_concepts": [
+                    "cross-validation",
+                    "multiple folds",
+                    "model evaluation"
+                ]
+            },
+            {
+                "id": 15,
+                "question": "Explain the difference between bagging and boosting.",
+                "category": "Ensemble Learning",
+                "expected_concepts": [
+                    "ensemble",
+                    "bagging",
+                    "boosting",
+                    "multiple models"
+                ]
+            }
+        ]
+    }
+}
