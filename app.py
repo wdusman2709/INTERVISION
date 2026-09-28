@@ -282,11 +282,12 @@ elif st.session_state.page == "interview":
         f"Category: {current_question['category']}"
     )
 
-    answer = st.text_area(
-        "Your Answer",
-        placeholder="Type your answer here...",
-        height=180
-    )
+answer = st.text_area(
+    "Your Answer",
+    placeholder="Type your answer here...",
+    height=180,
+    key=f"answer_{question_number}"
+)
 
     if st.button(
         "Submit Answer →",
