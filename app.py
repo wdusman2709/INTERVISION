@@ -1,5 +1,6 @@
 import streamlit as st
-
+import json
+import random
 # --------------------------------------------------
 # 1. Page setup
 # --------------------------------------------------
@@ -234,28 +235,82 @@ elif st.session_state.page == "setup":
 
 elif st.session_state.page == "interview":
 
-    st.title("🎤 Interview")
+    st.title("🎤 INTERVISION Interview")
 
-    st.success("Interview module is ready for the next step.")
+    # Load question bank
+    with open("data/questions.json", "r") as file:
+        question_bank = json.load(file)
+
+    # Get selected role and difficulty
+    role = st.session_state.job_role
+    difficulty = st.session_state.difficulty
+
+    # Get questions for selected role and difficulty
+    available_questions = question_bank[role][difficulty]
+
+    # Create interview question list only once
+    if "interview_questions" not in st.session_state:
+
+        number_of_questions = st.session_state.number_of_questions
+
+        st.session_state.interview_questions = random.sample(
+            available_questions,
+            min(number_of_questions, len(available_questions))
+        )
+
+        st.session_state.current_question = 0
+
+    # Current question
+    question_number = st.session_state.current_question
+
+    current_question = st.session_state.interview_questions[
+        question_number
+    ]
 
     st.write(
-        f"**Role:** {st.session_state.job_role}"
-    )
-
-    st.write(
-        f"**Difficulty:** {st.session_state.difficulty}"
-    )
-
-    st.write(
-        f"**Interview Type:** {st.session_state.interview_type}"
-    )
-
-    st.write(
-        f"**Questions:** {st.session_state.number_of_questions}"
+        f"**Question {question_number + 1} "
+        f"of {len(st.session_state.interview_questions)}**"
     )
 
     st.divider()
 
-    st.info(
-        "Question Engine will be added next."
+    st.markdown(
+        f"### {current_question['question']}"
     )
+
+    st.caption(
+        f"Category: {current_question['category']}"
+    )
+
+    answer = st.text_area(
+        "Your Answer",
+        placeholder="Type your answer here...",
+        height=180
+    )
+
+    if st.button(
+        "Submit Answer →",
+        use_container_width=True
+    ):
+
+        if answer.strip() == "":
+            st.warning("Please enter your answer before continuing.")
+
+        else:
+
+            st.success("Answer submitted successfully! ✅")
+
+            if (
+                question_number + 1
+                < len(st.session_state.interview_questions)
+            ):
+
+                st.session_state.current_question += 1
+
+                st.rerun()
+
+            else:
+
+                st.success(
+                    "🎉 You have completed the interview!"
+                )
