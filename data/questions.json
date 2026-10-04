@@ -1,168 +1,1310 @@
 {
-    "AI/ML Intern": {
-        "Easy": [
-            {
-                "id": 1,
-                "question": "What is Artificial Intelligence?",
-                "category": "AI Fundamentals",
-                "expected_concepts": [
-                    "machines",
-                    "intelligence",
-                    "human-like tasks"
-                ]
-            },
-            {
-                "id": 2,
-                "question": "What is Machine Learning?",
-                "category": "ML Fundamentals",
-                "expected_concepts": [
-                    "learning from data",
-                    "patterns",
-                    "prediction"
-                ]
-            },
-            {
-                "id": 3,
-                "question": "What is the difference between AI and Machine Learning?",
-                "category": "AI Fundamentals",
-                "expected_concepts": [
-                    "AI",
-                    "machine learning",
-                    "subset"
-                ]
-            },
-            {
-                "id": 4,
-                "question": "What is a dataset?",
-                "category": "Data",
-                "expected_concepts": [
-                    "collection of data",
-                    "training",
-                    "analysis"
-                ]
-            },
-            {
-                "id": 5,
-                "question": "What is a feature in Machine Learning?",
-                "category": "ML Fundamentals",
-                "expected_concepts": [
-                    "input",
-                    "variable",
-                    "data"
-                ]
-            }
-        ],
-
-        "Medium": [
-            {
-                "id": 6,
-                "question": "What is supervised learning?",
-                "category": "Machine Learning",
-                "expected_concepts": [
-                    "labelled data",
-                    "training",
-                    "prediction"
-                ]
-            },
-            {
-                "id": 7,
-                "question": "What is unsupervised learning?",
-                "category": "Machine Learning",
-                "expected_concepts": [
-                    "unlabelled data",
-                    "patterns",
-                    "clustering"
-                ]
-            },
-            {
-                "id": 8,
-                "question": "What is overfitting?",
-                "category": "Machine Learning",
-                "expected_concepts": [
-                    "training data",
-                    "poor generalization",
-                    "unseen data"
-                ]
-            },
-            {
-                "id": 9,
-                "question": "What is the purpose of train-test split?",
-                "category": "Model Evaluation",
-                "expected_concepts": [
-                    "training data",
-                    "testing data",
-                    "evaluation"
-                ]
-            },
-            {
-                "id": 10,
-                "question": "What is the difference between classification and regression?",
-                "category": "Machine Learning",
-                "expected_concepts": [
-                    "classification",
-                    "categories",
-                    "regression",
-                    "continuous values"
-                ]
-            }
-        ],
-
-        "Hard": [
-            {
-                "id": 11,
-                "question": "Explain the bias-variance tradeoff.",
-                "category": "Machine Learning",
-                "expected_concepts": [
-                    "bias",
-                    "variance",
-                    "underfitting",
-                    "overfitting"
-                ]
-            },
-            {
-                "id": 12,
-                "question": "How would you handle missing values in a dataset?",
-                "category": "Data Preprocessing",
-                "expected_concepts": [
-                    "missing values",
-                    "removal",
-                    "imputation",
-                    "mean",
-                    "median"
-                ]
-            },
-            {
-                "id": 13,
-                "question": "How can you evaluate a classification model?",
-                "category": "Model Evaluation",
-                "expected_concepts": [
-                    "accuracy",
-                    "precision",
-                    "recall",
-                    "F1 score"
-                ]
-            },
-            {
-                "id": 14,
-                "question": "What is cross-validation and why is it useful?",
-                "category": "Model Evaluation",
-                "expected_concepts": [
-                    "cross-validation",
-                    "multiple folds",
-                    "model evaluation"
-                ]
-            },
-            {
-                "id": 15,
-                "question": "Explain the difference between bagging and boosting.",
-                "category": "Ensemble Learning",
-                "expected_concepts": [
-                    "ensemble",
-                    "bagging",
-                    "boosting",
-                    "multiple models"
-                ]
-            }
+  "AI/ML Intern": {
+    "Easy": [
+      {
+        "category": "Technical",
+        "question": "What is machine learning?",
+        "expected_concepts": [
+          "data",
+          "patterns",
+          "learning",
+          "prediction"
         ]
-    }
+      },
+      {
+        "category": "Technical",
+        "question": "Explain supervised learning with an example.",
+        "expected_concepts": [
+          "labeled data",
+          "input",
+          "output",
+          "example"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is the difference between classification and regression?",
+        "expected_concepts": [
+          "classification",
+          "categories",
+          "regression",
+          "continuous values"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Why do we split data into training and testing sets?",
+        "expected_concepts": [
+          "training",
+          "testing",
+          "unseen data",
+          "generalization"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is a feature in a machine learning dataset?",
+        "expected_concepts": [
+          "input variable",
+          "attribute",
+          "predictor",
+          "data"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is a label or target variable?",
+        "expected_concepts": [
+          "target",
+          "output",
+          "prediction",
+          "known value"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is unsupervised learning?",
+        "expected_concepts": [
+          "unlabeled data",
+          "patterns",
+          "clustering",
+          "structure"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is a dataset, and what are rows and columns commonly used for?",
+        "expected_concepts": [
+          "dataset",
+          "rows",
+          "records",
+          "columns",
+          "features"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Why is data cleaning important before training a model?",
+        "expected_concepts": [
+          "missing values",
+          "duplicates",
+          "inconsistent data",
+          "quality"
+        ]
+      },
+      {
+        "category": "HR",
+        "question": "Tell me about yourself and why you are interested in AI/ML.",
+        "expected_concepts": [
+          "background",
+          "interest",
+          "skills",
+          "goals"
+        ]
+      }
+    ],
+    "Medium": [
+      {
+        "category": "Technical",
+        "question": "What is overfitting, and how can you reduce it?",
+        "expected_concepts": [
+          "training data",
+          "unseen data",
+          "generalization",
+          "regularization",
+          "cross-validation"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Explain the bias-variance trade-off.",
+        "expected_concepts": [
+          "bias",
+          "variance",
+          "model complexity",
+          "generalization"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is cross-validation, and why is it useful?",
+        "expected_concepts": [
+          "folds",
+          "validation",
+          "performance estimate",
+          "training data"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you handle missing values in a dataset?",
+        "expected_concepts": [
+          "remove rows",
+          "imputation",
+          "mean",
+          "median",
+          "missingness"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Explain precision, recall, and F1-score.",
+        "expected_concepts": [
+          "true positives",
+          "false positives",
+          "false negatives",
+          "precision",
+          "recall",
+          "F1"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is the difference between a decision tree and a random forest?",
+        "expected_concepts": [
+          "tree",
+          "ensemble",
+          "multiple trees",
+          "overfitting",
+          "averaging"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Why might you normalize or standardize numerical features?",
+        "expected_concepts": [
+          "scale",
+          "normalization",
+          "standardization",
+          "distance",
+          "optimization"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is data leakage, and how can it affect model evaluation?",
+        "expected_concepts": [
+          "information leakage",
+          "test data",
+          "training",
+          "unrealistic performance"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you detect and handle class imbalance?",
+        "expected_concepts": [
+          "class distribution",
+          "resampling",
+          "class weights",
+          "precision",
+          "recall"
+        ]
+      },
+      {
+        "category": "HR",
+        "question": "Describe a project where you solved a technical problem. What was your contribution?",
+        "expected_concepts": [
+          "problem",
+          "approach",
+          "individual contribution",
+          "result",
+          "learning"
+        ]
+      }
+    ],
+    "Hard": [
+      {
+        "category": "Technical",
+        "question": "How would you design a reliable evaluation strategy for an imbalanced classification problem?",
+        "expected_concepts": [
+          "stratified split",
+          "cross-validation",
+          "precision-recall",
+          "F1",
+          "confusion matrix",
+          "baseline"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "A model performs well on training data but poorly on test data. How would you investigate?",
+        "expected_concepts": [
+          "overfitting",
+          "data leakage",
+          "distribution shift",
+          "regularization",
+          "validation"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you choose a metric for a medical screening classifier?",
+        "expected_concepts": [
+          "false negatives",
+          "false positives",
+          "recall",
+          "precision",
+          "cost of errors"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Explain gradient descent and the role of the learning rate.",
+        "expected_concepts": [
+          "loss function",
+          "gradient",
+          "parameters",
+          "learning rate",
+          "convergence"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is the difference between bagging and boosting?",
+        "expected_concepts": [
+          "ensemble",
+          "parallel models",
+          "sequential models",
+          "variance",
+          "bias"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you identify and respond to data drift after deployment?",
+        "expected_concepts": [
+          "data distribution",
+          "monitoring",
+          "drift detection",
+          "retraining",
+          "validation"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Explain feature selection and why it may improve a model.",
+        "expected_concepts": [
+          "irrelevant features",
+          "dimensionality",
+          "overfitting",
+          "interpretability",
+          "validation"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you compare two models fairly when tuning hyperparameters?",
+        "expected_concepts": [
+          "same split",
+          "cross-validation",
+          "metric",
+          "test set",
+          "hyperparameters"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What are the risks of using a very complex model on a small dataset?",
+        "expected_concepts": [
+          "overfitting",
+          "variance",
+          "sample size",
+          "regularization",
+          "validation"
+        ]
+      },
+      {
+        "category": "HR",
+        "question": "Tell me about a time you received critical feedback and how you acted on it.",
+        "expected_concepts": [
+          "feedback",
+          "response",
+          "improvement",
+          "specific example",
+          "outcome"
+        ]
+      }
+    ]
+  },
+  "Python Developer": {
+    "Easy": [
+      {
+        "category": "Technical",
+        "question": "What are Python's main built-in data types?",
+        "expected_concepts": [
+          "int",
+          "float",
+          "string",
+          "list",
+          "tuple",
+          "dictionary",
+          "set"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is the difference between a list and a tuple?",
+        "expected_concepts": [
+          "mutable",
+          "immutable",
+          "ordered",
+          "elements"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How does a Python dictionary store data?",
+        "expected_concepts": [
+          "key",
+          "value",
+          "mapping",
+          "unique keys"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is the purpose of a for loop?",
+        "expected_concepts": [
+          "iteration",
+          "sequence",
+          "repeated operation"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is a function, and why do we use one?",
+        "expected_concepts": [
+          "reusable code",
+          "parameters",
+          "return value",
+          "organization"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How do you handle errors using try and except?",
+        "expected_concepts": [
+          "exception",
+          "try",
+          "except",
+          "error handling"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is the difference between == and is?",
+        "expected_concepts": [
+          "equality",
+          "identity",
+          "value",
+          "object"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is a Python module?",
+        "expected_concepts": [
+          "file",
+          "functions",
+          "classes",
+          "import",
+          "reuse"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How can you read a text file in Python?",
+        "expected_concepts": [
+          "open",
+          "read",
+          "with",
+          "file handling"
+        ]
+      },
+      {
+        "category": "HR",
+        "question": "Why do you want to work as a Python developer?",
+        "expected_concepts": [
+          "interest",
+          "Python",
+          "projects",
+          "learning goals"
+        ]
+      }
+    ],
+    "Medium": [
+      {
+        "category": "Technical",
+        "question": "Explain list comprehensions and when you would use them.",
+        "expected_concepts": [
+          "concise",
+          "iteration",
+          "condition",
+          "new list"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What are decorators in Python?",
+        "expected_concepts": [
+          "function",
+          "wrapper",
+          "behavior",
+          "reusable"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Explain generators and the yield keyword.",
+        "expected_concepts": [
+          "lazy evaluation",
+          "iterator",
+          "yield",
+          "memory"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is the difference between shallow copy and deep copy?",
+        "expected_concepts": [
+          "nested objects",
+          "references",
+          "independent copy",
+          "copy module"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How do Python's *args and **kwargs work?",
+        "expected_concepts": [
+          "variable positional arguments",
+          "keyword arguments",
+          "tuple",
+          "dictionary"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is object-oriented programming? Explain inheritance and encapsulation.",
+        "expected_concepts": [
+          "class",
+          "object",
+          "inheritance",
+          "encapsulation",
+          "methods"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you structure a Python project with multiple modules?",
+        "expected_concepts": [
+          "modules",
+          "packages",
+          "imports",
+          "separation of concerns",
+          "entry point"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What are common causes of slow Python code, and how would you investigate?",
+        "expected_concepts": [
+          "profiling",
+          "algorithmic complexity",
+          "I/O",
+          "bottleneck",
+          "optimization"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you test a function that processes invalid input?",
+        "expected_concepts": [
+          "unit tests",
+          "edge cases",
+          "exceptions",
+          "assertions",
+          "expected behavior"
+        ]
+      },
+      {
+        "category": "HR",
+        "question": "Describe a bug you found and how you tracked down its cause.",
+        "expected_concepts": [
+          "reproduction",
+          "debugging",
+          "root cause",
+          "fix",
+          "testing"
+        ]
+      }
+    ],
+    "Hard": [
+      {
+        "category": "Technical",
+        "question": "Explain Python's Global Interpreter Lock and when it matters.",
+        "expected_concepts": [
+          "GIL",
+          "threads",
+          "CPU-bound",
+          "I/O-bound",
+          "multiprocessing"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How do context managers work, and how could you create one?",
+        "expected_concepts": [
+          "enter",
+          "exit",
+          "resource management",
+          "with",
+          "cleanup"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Compare threading, multiprocessing, and asynchronous programming.",
+        "expected_concepts": [
+          "concurrency",
+          "parallelism",
+          "I/O-bound",
+          "CPU-bound",
+          "event loop"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How does Python memory management work at a high level?",
+        "expected_concepts": [
+          "reference counting",
+          "garbage collection",
+          "objects",
+          "memory"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you design a resilient API client in Python?",
+        "expected_concepts": [
+          "timeouts",
+          "retries",
+          "backoff",
+          "status codes",
+          "logging",
+          "error handling"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you profile and optimize a memory-heavy Python application?",
+        "expected_concepts": [
+          "profiling",
+          "memory usage",
+          "data structures",
+          "streaming",
+          "benchmark"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What are type hints, and how can they improve a codebase?",
+        "expected_concepts": [
+          "annotations",
+          "static analysis",
+          "readability",
+          "maintainability"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you organize configuration and secrets for a deployed Python app?",
+        "expected_concepts": [
+          "environment variables",
+          "secret management",
+          "configuration",
+          "avoid hardcoding"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Explain dependency isolation and why virtual environments are useful.",
+        "expected_concepts": [
+          "dependencies",
+          "isolation",
+          "reproducibility",
+          "virtual environment"
+        ]
+      },
+      {
+        "category": "HR",
+        "question": "Tell me about a design decision you changed after reviewing trade-offs.",
+        "expected_concepts": [
+          "alternatives",
+          "trade-offs",
+          "evidence",
+          "decision",
+          "outcome"
+        ]
+      }
+    ]
+  },
+  "Data Analyst": {
+    "Easy": [
+      {
+        "category": "Technical",
+        "question": "What is the difference between structured and unstructured data?",
+        "expected_concepts": [
+          "schema",
+          "tables",
+          "text",
+          "images",
+          "organization"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is SQL used for?",
+        "expected_concepts": [
+          "query",
+          "database",
+          "retrieve",
+          "manage data"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Explain the difference between a primary key and a foreign key.",
+        "expected_concepts": [
+          "unique identifier",
+          "relationship",
+          "referential integrity",
+          "tables"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is the difference between mean, median, and mode?",
+        "expected_concepts": [
+          "average",
+          "middle value",
+          "most frequent",
+          "distribution"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Why do analysts clean data before analysis?",
+        "expected_concepts": [
+          "missing values",
+          "duplicates",
+          "inconsistency",
+          "accuracy"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is a KPI? Give an example.",
+        "expected_concepts": [
+          "key performance indicator",
+          "measurable",
+          "business goal",
+          "example"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is the purpose of a chart or dashboard?",
+        "expected_concepts": [
+          "visualization",
+          "patterns",
+          "monitoring",
+          "decision making"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is the difference between a row and a column in a table?",
+        "expected_concepts": [
+          "record",
+          "observation",
+          "field",
+          "variable"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is a filter in a spreadsheet or data tool?",
+        "expected_concepts": [
+          "subset",
+          "criteria",
+          "records",
+          "analysis"
+        ]
+      },
+      {
+        "category": "HR",
+        "question": "Why are you interested in data analysis?",
+        "expected_concepts": [
+          "curiosity",
+          "data",
+          "problem solving",
+          "business decisions"
+        ]
+      }
+    ],
+    "Medium": [
+      {
+        "category": "Technical",
+        "question": "Explain INNER JOIN and LEFT JOIN in SQL.",
+        "expected_concepts": [
+          "matching rows",
+          "all left rows",
+          "NULL",
+          "join condition"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you investigate a sudden drop in monthly sales?",
+        "expected_concepts": [
+          "validate data",
+          "segment",
+          "compare periods",
+          "drivers",
+          "seasonality"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is the difference between correlation and causation?",
+        "expected_concepts": [
+          "association",
+          "causal relationship",
+          "confounding",
+          "experiment"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you handle missing or duplicated records?",
+        "expected_concepts": [
+          "profile data",
+          "deduplication",
+          "imputation",
+          "business rules",
+          "document assumptions"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is a window function in SQL, and when is it useful?",
+        "expected_concepts": [
+          "partition",
+          "order",
+          "over clause",
+          "ranking",
+          "running total"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you explain a confidence interval to a non-technical stakeholder?",
+        "expected_concepts": [
+          "range",
+          "uncertainty",
+          "sampling",
+          "interpretation"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What makes a dashboard useful to business stakeholders?",
+        "expected_concepts": [
+          "audience",
+          "clear metrics",
+          "context",
+          "filters",
+          "actionable insights"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you validate a dataset before calculating a KPI?",
+        "expected_concepts": [
+          "data types",
+          "completeness",
+          "duplicates",
+          "definitions",
+          "reconciliation"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is an A/B test, and what should be considered before interpreting results?",
+        "expected_concepts": [
+          "control",
+          "treatment",
+          "randomization",
+          "sample size",
+          "statistical significance"
+        ]
+      },
+      {
+        "category": "HR",
+        "question": "Describe a time you explained a technical finding to someone without a technical background.",
+        "expected_concepts": [
+          "audience",
+          "plain language",
+          "evidence",
+          "recommendation",
+          "feedback"
+        ]
+      }
+    ],
+    "Hard": [
+      {
+        "category": "Technical",
+        "question": "How would you design an experiment to measure whether a new feature improves retention?",
+        "expected_concepts": [
+          "hypothesis",
+          "randomization",
+          "control group",
+          "retention metric",
+          "sample size",
+          "confounders"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "A dashboard KPI disagrees with a finance report. How would you investigate?",
+        "expected_concepts": [
+          "metric definitions",
+          "data sources",
+          "filters",
+          "time windows",
+          "reconciliation"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you analyze a metric with strong seasonality and a long-term trend?",
+        "expected_concepts": [
+          "seasonality",
+          "trend",
+          "baseline",
+          "year-over-year",
+          "decomposition"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Explain statistical significance versus practical significance.",
+        "expected_concepts": [
+          "p-value",
+          "effect size",
+          "business impact",
+          "uncertainty",
+          "context"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you optimize a slow SQL query on a large table?",
+        "expected_concepts": [
+          "execution plan",
+          "indexes",
+          "filters",
+          "joins",
+          "partitioning"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you assess whether an observed customer segment difference is reliable?",
+        "expected_concepts": [
+          "sample size",
+          "uncertainty",
+          "multiple comparisons",
+          "confounders",
+          "validation"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you define and measure customer churn?",
+        "expected_concepts": [
+          "definition",
+          "time window",
+          "cohort",
+          "denominator",
+          "business context"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you communicate uncertainty when presenting a forecast to leadership?",
+        "expected_concepts": [
+          "assumptions",
+          "prediction interval",
+          "scenarios",
+          "limitations",
+          "decision risk"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What checks would you build into a recurring data pipeline?",
+        "expected_concepts": [
+          "schema validation",
+          "freshness",
+          "row counts",
+          "null checks",
+          "alerts",
+          "lineage"
+        ]
+      },
+      {
+        "category": "HR",
+        "question": "Tell me about a time your analysis challenged an assumption. How did you present the finding?",
+        "expected_concepts": [
+          "evidence",
+          "assumption",
+          "communication",
+          "limitations",
+          "outcome"
+        ]
+      }
+    ]
+  },
+  "Software Developer": {
+    "Easy": [
+      {
+        "category": "Technical",
+        "question": "What is the difference between a compiler and an interpreter?",
+        "expected_concepts": [
+          "translation",
+          "execution",
+          "machine code",
+          "runtime"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is an algorithm?",
+        "expected_concepts": [
+          "steps",
+          "problem solving",
+          "input",
+          "output"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is the purpose of version control such as Git?",
+        "expected_concepts": [
+          "history",
+          "collaboration",
+          "branches",
+          "changes"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Explain the difference between a bug and a feature.",
+        "expected_concepts": [
+          "defect",
+          "expected behavior",
+          "new capability",
+          "requirements"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is an API?",
+        "expected_concepts": [
+          "interface",
+          "communication",
+          "request",
+          "response"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is the difference between frontend and backend development?",
+        "expected_concepts": [
+          "user interface",
+          "server",
+          "business logic",
+          "database"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Why are tests useful in software development?",
+        "expected_concepts": [
+          "correctness",
+          "regression",
+          "automated checks",
+          "confidence"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is a database?",
+        "expected_concepts": [
+          "store",
+          "organize",
+          "retrieve",
+          "data"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is the purpose of a loop in programming?",
+        "expected_concepts": [
+          "repetition",
+          "condition",
+          "iteration",
+          "collection"
+        ]
+      },
+      {
+        "category": "HR",
+        "question": "What interests you about software development?",
+        "expected_concepts": [
+          "problem solving",
+          "building software",
+          "learning",
+          "teamwork"
+        ]
+      }
+    ],
+    "Medium": [
+      {
+        "category": "Technical",
+        "question": "Explain time complexity and Big O notation with an example.",
+        "expected_concepts": [
+          "input size",
+          "growth rate",
+          "O(n)",
+          "O(1)",
+          "complexity"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is the difference between a stack and a queue?",
+        "expected_concepts": [
+          "LIFO",
+          "FIFO",
+          "push",
+          "pop",
+          "enqueue",
+          "dequeue"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Explain REST APIs and common HTTP methods.",
+        "expected_concepts": [
+          "resources",
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "stateless"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you debug a feature that works locally but fails in production?",
+        "expected_concepts": [
+          "logs",
+          "environment",
+          "reproduction",
+          "configuration",
+          "monitoring"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is the difference between unit, integration, and end-to-end tests?",
+        "expected_concepts": [
+          "isolated component",
+          "components together",
+          "full workflow",
+          "scope"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Why are database indexes useful, and what trade-offs do they introduce?",
+        "expected_concepts": [
+          "query speed",
+          "lookup",
+          "storage",
+          "write overhead"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is the purpose of code review?",
+        "expected_concepts": [
+          "quality",
+          "bugs",
+          "readability",
+          "knowledge sharing",
+          "security"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you handle conflicting changes in Git?",
+        "expected_concepts": [
+          "branches",
+          "merge conflict",
+          "diff",
+          "resolve",
+          "test"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What is the difference between authentication and authorization?",
+        "expected_concepts": [
+          "identity",
+          "permissions",
+          "access control",
+          "credentials"
+        ]
+      },
+      {
+        "category": "HR",
+        "question": "Describe a team project and how you handled a disagreement about implementation.",
+        "expected_concepts": [
+          "communication",
+          "trade-offs",
+          "collaboration",
+          "decision",
+          "result"
+        ]
+      }
+    ],
+    "Hard": [
+      {
+        "category": "Technical",
+        "question": "How would you design a service to handle increased traffic reliably?",
+        "expected_concepts": [
+          "load balancing",
+          "caching",
+          "horizontal scaling",
+          "monitoring",
+          "failure handling"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Explain database transactions and the ACID properties.",
+        "expected_concepts": [
+          "atomicity",
+          "consistency",
+          "isolation",
+          "durability",
+          "transaction"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you investigate intermittent latency in a distributed application?",
+        "expected_concepts": [
+          "tracing",
+          "metrics",
+          "logs",
+          "dependencies",
+          "percentiles",
+          "bottleneck"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "What are common causes of race conditions, and how can they be prevented?",
+        "expected_concepts": [
+          "shared state",
+          "concurrency",
+          "locks",
+          "atomic operations",
+          "testing"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you design an API that remains backward compatible as it evolves?",
+        "expected_concepts": [
+          "versioning",
+          "contracts",
+          "optional fields",
+          "deprecation",
+          "compatibility tests"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Explain caching strategies and how you would manage stale data.",
+        "expected_concepts": [
+          "cache invalidation",
+          "TTL",
+          "consistency",
+          "write-through",
+          "read-through"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you protect a web service against common security risks?",
+        "expected_concepts": [
+          "input validation",
+          "authentication",
+          "authorization",
+          "secrets",
+          "rate limiting",
+          "logging"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "How would you choose between a monolith and microservices for a new product?",
+        "expected_concepts": [
+          "complexity",
+          "deployment",
+          "team ownership",
+          "operational overhead",
+          "scaling"
+        ]
+      },
+      {
+        "category": "Technical",
+        "question": "Describe a safe deployment strategy for a change that could affect many users.",
+        "expected_concepts": [
+          "staging",
+          "canary",
+          "feature flags",
+          "monitoring",
+          "rollback"
+        ]
+      },
+      {
+        "category": "HR",
+        "question": "Describe a technical mistake you made and the steps you took to prevent it from recurring.",
+        "expected_concepts": [
+          "ownership",
+          "root cause",
+          "corrective action",
+          "prevention",
+          "learning"
+        ]
+      }
+    ]
+  }
 }
