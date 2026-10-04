@@ -8,8 +8,13 @@ import streamlit as st
 
 from modules.scorer import score_answer
 from modules.evaluator import evaluate_answer
-
-
+from modules.database import (
+    initialize_database,
+    create_candidate,
+    create_interview,
+    save_answer,
+    update_interview_summary,
+)
 # ============================================================
 # PAGE CONFIGURATION
 # ============================================================
@@ -21,6 +26,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
+initialize_database()
 
 # ============================================================
 # SESSION STATE
@@ -511,11 +517,20 @@ elif st.session_state.page == "profile":
             elif not education.strip():
                 st.warning("Please enter your education.")
             else:
+                candidate_id = create_candidate(
+                    name=name.strip(),
+                    education=education.strip(),
+                    skills=skills.strip(),
+                    experience=experience.strip(),
+                    job_role=job_role,
+                )
+
                 st.session_state.name = name.strip()
                 st.session_state.education = education.strip()
                 st.session_state.skills = skills.strip()
                 st.session_state.experience = experience.strip()
                 st.session_state.job_role = job_role
+                st.session_state.candidate_id = candidate_id
 
                 go_to("setup")
 
@@ -678,6 +693,19 @@ elif st.session_state.page == "setup":
                         st.session_state.current_question = 0
                         st.session_state.answers = []
                         st.session_state.evaluated_answers = {}
+
+                        # Create database record for this interview.
+                        candidate_id = st.session_state.get("candidate_id")
+
+                        if candidate_id:
+                            interview_id = create_interview(
+                                candidate_id=candidate_id,
+                                difficulty=difficulty,
+                                interview_type=interview_type,
+                                number_of_questions=question_count,
+                            )
+
+                            st.session_state.interview_id = interview_id
 
                         go_to("interview")
 
@@ -845,6 +873,65 @@ elif st.session_state.page == "interview":
                     ] = result
 
                     st.session_state.answers.append(result)
+
+                    # Save evaluated answer to database.
+                    interview_id = st.session_state.get("interview_id")
+
+                    if interview_id:
+
+                        save_answer(
+                            interview_id=interview_id,
+                            question=current_question["question"],
+                            answer=answer.strip(),
+                            category=current_question.get(
+                                "category",
+                                "General",
+                            ),
+                            score=safe_score(
+                                ai_result.get("overall_score", 0)
+                            ),
+                            relevance=safe_score(
+                                ai_result.get("relevance", 0)
+                            ),
+                            correctness=safe_score(
+                                ai_result.get("correctness", 0)
+                            ),
+                            completeness=safe_score(
+                                ai_result.get("completeness", 0)
+                            ),
+                            clarity=safe_score(
+                                ai_result.get("clarity", 0)
+                            ),
+                            feedback=ai_result.get(
+                                "feedback",
+                                "",
+                            ),
+                            strengths=ai_result.get(
+                                "strengths",
+                                [],
+                            ),
+                            weaknesses=ai_result.get(
+                                "weaknesses",
+                                [],
+                            ),
+                        )
+
+                        # Update interview statistics.
+                        saved_scores = [
+                            safe_score(
+                                item.get("ai_evaluation", {}).get(
+                                    "overall_score",
+                                    0,
+                                )
+                            )
+                            for item in st.session_state.answers
+                        ]
+
+                        update_interview_summary(
+                            interview_id,
+                            saved_scores,
+                        )
+
 
                     st.rerun()
 
